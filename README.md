@@ -12,3 +12,7 @@ Outputs:
 ![image](https://user-images.githubusercontent.com/58257239/115274864-c17b1980-a15e-11eb-8f2b-f1ee6438de58.png)
 3: k means cluster for feature 1 and 2 for minority dataset
 ![image](https://user-images.githubusercontent.com/58257239/115275600-a1982580-a15f-11eb-9efa-9ded58866f08.png)
+Steps to execute the code.py:
+  .Put the code.py and creditcard.csv file from archive.zip in same folder
+  .pip install the required packages(opencv, pandas, matplotlib, sklearn
+  .Run the code file
