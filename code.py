@@ -1,6 +1,8 @@
-#creating majority - minority dataset
 import pandas
 import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+#creating majority - minority dataset
 datainput = pandas.read_csv('creditcard.csv')
 minority = datainput[datainput['Class'] == 1]
 majority = datainput[datainput['Class'] == 0]
@@ -12,12 +14,13 @@ fieldName = [str1, str2]
 fieldSize = [len(majority),len(minority)]
 ax.bar(fieldName,fieldSize,color=['deepskyblue','lime'])
 plt.show()
+
 #plotting majority and minority datasets
 plt.plot(majority["V1"], majority["V2"], "o", color="deepskyblue")
 plt.plot(minority["V1"], minority["V2"], "o", color="lime")
 plt.show()
+
 #plotting minority datasets as k means clusters
-from sklearn.cluster import KMeans
 kmeans = KMeans(2)
 kmeans.fit(minority)
 clustors = minority.copy()
